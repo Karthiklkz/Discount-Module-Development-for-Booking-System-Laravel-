@@ -1,0 +1,24 @@
++-------------------+       +------------------+       +-----------------+
+|       Users       |       |      Bookings     |       |     Doctors     |
++-------------------+       +------------------+       +-----------------+
+| id (PK)           |<----->| user_id (FK)      |       | id (PK)         |
+| name              |       | doctor_id (FK)    |<----->| name            |
+| email             |       | appointment_date  |       | specialization  |
+| phone_number      |       | original_cost     |       | phone_number    |
+| created_at        |       | final_cost        |       | email           |
+| updated_at        |       | discount_id (FK)  |       | created_at      |
++-------------------+       | created_at        |       | updated_at      |
+                            | updated_at        |       +-----------------+
+                            +------------------+
+                                    |
+                                    |
+                            +------------------+
+                            |    Discounts     |
+                            +------------------+
+                            | id (PK)          |
+                            | name             |
+                            | type             |
+                            | value            |
+                            | created_at       |
+                            | updated_at       |
+                            +------------------+
